@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+  background-color: #fce4ec;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+input {
+  padding: 10px;
+  margin: 20px 0;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid pink;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px pink;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+.card .full-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  min-height: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 20px hotpink;
+  padding: 10px;
+  z-index: 10;
+  transform: scale(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  height: auto;
+  z-index: 10; 
+  box-shadow: 0 0 20px hotpink;
+}
+
+.card:hover .full-description {
+  transform: scale(1);
+}
+
+.card .summary {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  z-index: 1;
+}
+
+
+.card p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* show 4 lines */
+  -webkit-box-orient: vertical;
+  transition: all 0.3s ease;
+}
+
+.card:hover p {
+  -webkit-line-clamp: unset;
+}
+
+.upload-form {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+}
+
+.upload-form input,
+.upload-form textarea,
+.upload-form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid pink;
+  font-size: 14px;
+}
+
+.upload-form button {
+  background-color: pink;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-form button:hover {
+  background-color: hotpink;
+  color: white;
+}
+
+
